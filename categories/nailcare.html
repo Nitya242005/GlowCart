@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nailcare Products</title>
+    <link rel="stylesheet" href="nailcare.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Nailcare Collection</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="../assets/images/nailcare1.png" alt="Nail Polish">
+                <h3>Glossy Nail Polish</h3>
+                <p>Price: Rs.80</p>
+                <button class="add-to-cart" data-price="100" data-product="Glossy Nail Polish">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare2.png" alt="Nail Polish Remover">
+                <h3>Nail Polish Remover</h3>
+                <p>Price: Rs.120</p>
+                <button class="add-to-cart" data-price="80" data-product="Nail Polish Remover">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare3.png" alt="Cuticle Oil">
+                <h3>Cuticle Nourishing Oil</h3>
+                <p>Price: Rs.150</p>
+                <button class="add-to-cart" data-price="150" data-product="Cuticle Nourishing Oil">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare4.png" alt="Nail Strengthener">
+                <h3>Nail Strengthener</h3>
+                <p>Price: Rs.200</p>
+                <button class="add-to-cart" data-price="200" data-product="Nail Strengthener">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare5.png" alt="Manicure Kit">
+                <h3>Professional Manicure Kit</h3>
+                <p>Price: Rs.350</p>
+                <button class="add-to-cart" data-price="350" data-product="Professional Manicure Kit">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare6.png" alt="Nail Art Stickers">
+                <h3>Nail Art Stickers</h3>
+                <p>Price: Rs.120</p>
+                <button class="add-to-cart" data-price="120" data-product="Nail Art Stickers">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare7.png" alt="Nail Buffer">
+                <h3>Shiny Nail Buffer</h3>
+                <p>Price: Rs.90</p>
+                <button class="add-to-cart" data-price="90" data-product="Shiny Nail Buffer">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/nailcare8.png" alt="Acrylic Nail Set">
+                <h3>Acrylic Nail Set</h3>
+                <p>Price: Rs.400</p>
+                <button class="add-to-cart" data-price="400" data-product="Acrylic Nail Set">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <div id="cartItems"></div>
+        <p>Total Price: Rs. <span id="totalprice">0</span></p>
+        <button id="placeOrder">Place Order</button> <!-- New Place Order Button -->
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

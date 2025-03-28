@@ -1,0 +1,324 @@
+/* Light, Elegant Background */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#ec3782;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h2 {
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    background:linear-gradient(pink,pink);
+    text-align: center;
+    width:300px;
+    margin:auto;
+    border-radius: 10px;
+    border-color:black;
+}
+p{
+    font-size: 20px;
+}
+.navbar {
+    background-color: black;  
+    height: 100px;
+}
+
+/* Navbar Brand Logo Animation */
+.navbar-brand img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%; 
+    border: 2px solid pink;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Navigation Buttons */
+.navbar-nav {
+    display: flex;
+    gap: 50px; 
+}
+
+.navbar-nav .nav-item {
+    list-style: none;
+}
+
+/* Button Pulsing Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.navbar-nav .nav-link {
+    background: #ffa9c9;
+    color:black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    background: #e13586;
+    color: white;
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Glowing Search Bar */
+.navbar .search-input {
+    width: 200px; 
+    border-radius: 20px;
+    border: 1px solid #FF7E67;
+    padding: 5px 15px;
+    background: #FFF5E1;
+    color: #333;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar .search-input:focus {
+    box-shadow: 0px 0px 10px rgba(255, 126, 103, 0.8);
+}
+
+/* Search Button Animation */
+.navbar .search-btn {
+    border-radius: 20px;
+    padding: 5px 15px;
+    background: #ffa9c9;
+    color: white;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar .search-btn:hover {
+    background: black;
+    transform: scale(1.05);
+}
+#loginBtn{
+    background-color:#ffa9c9;
+    color:black;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    padding: 10px;
+    
+}
+#loginBtn:hover{
+     background-color: #e13586;
+}
+
+/* Carousel Image Adjustments */
+.carousel-img {
+    display: block;
+    max-width: 70%;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Smooth Slide Transition */
+.carousel-item {
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Categories Section */
+.categories .row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top:20px;
+}
+
+.categories .col-md-3 {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+}
+
+/* Wobble Effect on Hover */
+@keyframes wobble {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0); }
+}
+
+.categories img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.4s ease-in-out;
+}
+
+/* Featured Products */
+.featured-products .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top:20px;
+}
+
+.featured-products .col-md-3 {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+}
+
+.featured-products img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.4s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #FF7E67;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Footer Icons Bounce Effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-icons i {
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-icons i:hover {
+    color: #FFD3B5;
+    animation: bounce 0.5s ease-in-out;
+}
+/* Responsive Design for Mobile View */
+@media screen and (max-width: 768px) {
+    /* Ensure proper scaling and alignment */
+    body {
+        padding: 10px;
+    }
+
+    /* Adjust Heading Width */
+    h2 {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    /* Adjust Navbar */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-brand img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        width: 80%;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top:10px;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Adjust Carousel */
+    .carousel-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust Categories */
+    .categories .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories .col-md-3
+    {
+        max-width: 90%;
+    }
+
+    .categories img{
+        width:100%;
+        height: auto;
+    }
+    .featured-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers items */
+        gap: 15px; /* Adds spacing between products */
+    }
+
+    .featured-products .product-item {
+        width: 45%; /* Makes two products per row */
+        text-align: center;
+    }
+
+    .featured-products img {
+        width: 100px; /* Ensures a good size for mobile */
+        height: 100px; /* Keeps images uniform */
+        object-fit: contain; /* Prevents distortion */
+        margin: auto;
+        display: block;
+    }
+    p{
+        font-size: 15px;
+    }
+    
+        /* Adjust Footer */
+        .footer-icons {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    
+}
+

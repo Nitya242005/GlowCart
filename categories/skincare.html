@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductCart</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Shop Now</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="../assets/images/skincare1.png" alt="Product 1">
+                <h3>Compact Powder</h3>
+                <p>Price: Rs.110</p>
+                <button class="add-to-cart" data-price="110" data-product="Compact Powder">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare2.png" alt="Product 2">
+                <h3>Face Wash</h3>
+                <p>Price: Rs.90</p>
+                <button class="add-to-cart" data-price="90" data-product="Face Wash">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare3.png" alt="Product 3">
+                <h3>Face Cream</h3>
+                <p>Price: Rs.65</p>
+                <button class="add-to-cart" data-price="65" data-product="Face Cream">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare4.png" alt="Product 4">
+                <h3>Soap</h3>
+                <p>Price: Rs.50</p>
+                <button class="add-to-cart" data-price="50" data-product="Soap">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/product2.png" alt="Product 5">
+                <h3>Lipstick</h3>
+                <p>Price: Rs.90</p>
+                <button class="add-to-cart" data-price="90" data-product="Lipstick">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare6.png" alt="Product 6">
+                <h3>Moisturizer Cream</h3>
+                <p>Price: Rs.120</p>
+                <button class="add-to-cart" data-price="120" data-product="Moisturizer Cream">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare7.png" alt="Product 7">
+                <h3>Foundation</h3>
+                <p>Price: Rs.180</p>
+                <button class="add-to-cart" data-price="180" data-product="Foundation">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/skincare8.png" alt="Product 8">
+                <h3>lip balm</h3>
+                <p>Price: Rs.80</p>
+                <button class="add-to-cart" data-price="80" data-product="lip balm">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <div id="cartItems"></div>
+            <p>Total Price: Rs. <span id="totalprice">0</span></p>
+            <button id="placeOrder" style="background-color: pink;">Place Order</button> <!-- New Place Order Button -->
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

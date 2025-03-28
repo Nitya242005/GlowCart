@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haircare Products</title>
+    <link rel="stylesheet" href="haircare.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Haircare Collection</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="../assets/images/haircare1.png" alt="Shampoo">
+                <h3>Herbal Shampoo</h3>
+                <p>Price: Rs.150</p>
+                <button class="add-to-cart" data-price="150" data-product="Herbal Shampoo">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare2.png" alt="Conditioner">
+                <h3>Silky Conditioner</h3>
+                <p>Price: Rs.120</p>
+                <button class="add-to-cart" data-price="120" data-product="Silky Conditioner">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare3.png" alt="Hair Oil">
+                <h3>Natural Hair Oil</h3>
+                <p>Price: Rs.100</p>
+                <button class="add-to-cart" data-price="100" data-product="Natural Hair Oil">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/product4.png" alt="Serum">
+                <h3>Hair Serum</h3>
+                <p>Price: Rs.250</p>
+                <button class="add-to-cart" data-price="250" data-product="Hair Serum">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare5.png" alt="Hair Mask">
+                <h3>Deep Conditioning Hair Mask</h3>
+                <p>Price: Rs.180</p>
+                <button class="add-to-cart" data-price="180" data-product="Deep Conditioning Hair Mask">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare6.png" alt="Hair Spray">
+                <h3>Hair Protection Spray</h3>
+                <p>Price: Rs.200</p>
+                <button class="add-to-cart" data-price="200" data-product="Hair Protection Spray">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare7.png" alt="Hair Gel">
+                <h3>Styling Hair Gel</h3>
+                <p>Price: Rs.130</p>
+                <button class="add-to-cart" data-price="130" data-product="Styling Hair Gel">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="../assets/images/haircare8.png" alt="Hair Growth Serum">
+                <h3>Hair Growth Serum</h3>
+                <p>Price: Rs.280</p>
+                <button class="add-to-cart" data-price="280" data-product="Hair Growth Serum">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <div id="cartItems"></div>
+            <p>Total Price: Rs. <span id="totalprice">0</span></p>
+            <button id="placeOrder">Place Order</button> <!-- New Place Order Button -->
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

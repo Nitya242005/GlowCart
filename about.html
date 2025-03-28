@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Glowcart</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            background:black;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            gap: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .text-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .text-section h2 {
+            color: #d63384;
+            font-size: 28px;
+        }
+        .text-section p {
+            color:white;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+        .text-section button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .text-section button:hover {
+            background-color: #b02d6e;
+        }
+        .image-section img {
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h2>About Glowcart</h2>
+            <p>Glowcart is your go-to destination for premium beauty and skincare products. We believe in enhancing your natural beauty with high-quality, cruelty-free, and dermatologically tested cosmetics. Our mission is to bring out the best in you by offering a wide range of skincare and beauty solutions that suit every skin type.</p>
+            <p>From organic skincare to luxurious beauty essentials, Glowcart is dedicated to providing you with products that help you shine from within. Join us on our journey to redefine beauty with authenticity, care, and innovation.</p>
+            <button onclick="window.location.href='index.html'">Explore More</button>
+        </div>
+        <div class="image-section">
+            <img src="assets/images/logo.png" alt="Glowcart Beauty Products">
+        </div>
+    </div>
+</body>
+</html>
