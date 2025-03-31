@@ -123,7 +123,7 @@
     
 
     <!-- Categories -->
-    <section class="categories container text-center mt-5">
+    <section class="categories container text-center mt-5 scroll-effect">
         <h2>Shop by Category</h2>
         <div class="row">
             <div class="col-md-3">
@@ -145,7 +145,7 @@
     </section>
 
     <!-- Featured Products -->
-    <section class="featured-products container text-center mt-5">
+    <section class="featured-products container text-center mt-5 scroll-effect">
         <h2>Featured Products</h2>
         <div class="row">
             <div class="col-2">
@@ -208,6 +208,34 @@
                 }
             });
         });
+     window.addEventListener("scroll", function () {
+    let footer = document.querySelector("footer");
+    let windowHeight = window.innerHeight;
+    let footerPosition = footer.getBoundingClientRect().top;
+
+    if (footerPosition < windowHeight - 50) {
+        footer.classList.add("visible");
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    let elements = document.querySelectorAll(".scroll-effect");
+
+    function revealOnScroll() {
+        elements.forEach((element) => {
+            let windowHeight = window.innerHeight;
+            let elementPosition = element.getBoundingClientRect().top;
+
+            if (elementPosition < windowHeight - 50) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Run on load in case some elements are already in view
+});
+
+
     </script>
 
     <script src="js/main.js"></script>
