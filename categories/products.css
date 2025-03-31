@@ -74,6 +74,7 @@ h2{
     flex-direction: column;
     align-items: center;
     position: relative;
+    animation: float 4s infinite;
 }
 
 /* Hover Effects */
@@ -216,4 +217,95 @@ button::before {
 #placeOrder{
        margin-left: 400px;
 
+}
+/* ✨ Neon Glow Effect for Headings */
+h2 {
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 105, 180, 0.8);
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Neon Glow Text Animation */
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px #ff5ed7; }
+    100% { text-shadow: 0 0 20px #ff0080; }
+}
+
+/* ✨ Floating Emojis Around Products */
+@keyframes floatEmojis {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Adding floating emojis */
+
+
+/* ✨ Pulsating Cart Animation */
+.cart {
+    animation: pulseCart 1.5s infinite alternate;
+}
+
+/* Pulsating Glow Effect */
+@keyframes pulseCart {
+    0% { box-shadow: 0 0 10px #ff7675; }
+    100% { box-shadow: 0 0 20px #ff4757, 0 0 40px rgba(255, 71, 87, 0.5); }
+}
+
+/* ✨ Wavy Text Effect */
+.container::before {
+    animation: waveText 2s infinite alternate ease-in-out;
+}
+
+/* Wavy Text Animation */
+@keyframes waveText {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(5deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+/* ✨ Button Ripple Effect */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create the ripple */
+button::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* ✨ Fading and Rotating Product Images */
+.product-item img {
+    animation: fadeInRotate 2s ease-in-out;
+    
+}
+
+/* Fade-in Rotate Animation */
+@keyframes fadeInRotate {
+    0% { opacity: 0; transform: rotate(-10deg) scale(0.8); }
+    100% { opacity: 1; transform: rotate(0deg) scale(1); }
+}
+
+/* ✨ Neon Glow on Hover */
+.product-item:hover {
+    box-shadow: 0 0 15px rgba(11, 202, 228, 1), 0 0 30px rgba(0, 255, 255, 0.8);
+    border: 2px solid #00f2ff;
+   
 }

@@ -8,22 +8,33 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-    #loginForm {
-    display:none;
+   #loginForm {
+    display: none;
     width: 300px;
     padding: 20px;
     background: #f8f8f8;
     border: 1px solid #ccc;
     border-radius: 8px;
-    position:absolute;
+    position: absolute;
     z-index: 1000;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top:20%;
-    right: 20px; /* Adjust this value for spacing from the right */
-    transform: translateY(-50%);
-
+    top:10%;
+    right: 20px; 
 }
+#closeLoginForm {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+#closeLoginForm:hover {
+    color: red;
+}
+
 .form-group {
     margin-bottom: 10px;
 }
@@ -86,6 +97,7 @@
 </nav>
 <div id="loginForm">
     <h3>Login</h3>
+    <span id="closeLoginForm">&times;</span> 
     <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" id="username" required>
@@ -129,17 +141,26 @@
             <div class="col-md-3">
                 <img src="assets/images/category1.png" alt="Skincare" class="img-fluid">
                 <p>Skincare</p>
-                <a href="categories/skincare.html" class="btn btn-dark">Get Products</a>
+                <a href="categories/skincare.html" class="btn" style=" background-color: #ffa9c9;
+                color:#333;
+                transition: transform 15s ease-in-out;
+                box-shadow: 0 0 20px rgba(253, 1, 228, 0.997);">Get Products</a>
             </div>
             <div class="col-md-3">
                 <img src="assets/images/category2.png" alt="Makeup" class="img-fluid">
                 <p>Haircare</p>
-                <a href="categories/haircare.html" class="btn btn-dark">Get Products</a>
+                <a href="categories/haircare.html" class="btn" style=" background-color: #ffa9c9;
+                color:#333;
+                transition: transform 15s ease-in-out;
+                box-shadow: 0 0 20px rgba(253, 1, 228, 0.997);">Get Products</a>
             </div>
             <div class="col-md-3">
                 <img src="assets/images/category3.png" alt="Haircare" class="img-fluid">
                 <p>NailCare</p>
-                <a href="categories/nailcare.html" class="btn btn-dark">Get Products</a>
+                <a href="categories/nailcare.html" class="btn" style=" background-color: #ffa9c9;
+                color:#333;
+                transition: transform 15s ease-in-out;
+                box-shadow: 0 0 20px rgba(253, 1, 228, 0.997);">Get Products</a>
             </div>
         </div>
     </section>
@@ -207,7 +228,11 @@
                     alert("Please fill all the fields.");
                 }
             });
+            closeLoginForm.addEventListener("click", function () {
+            loginForm.style.display = "none";});
         });
+        
+
      window.addEventListener("scroll", function () {
     let footer = document.querySelector("footer");
     let windowHeight = window.innerHeight;

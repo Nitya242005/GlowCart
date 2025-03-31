@@ -166,6 +166,10 @@ p{
     animation: wobble 0.4s ease-in-out;
 }
 
+.categories a:hover{
+    background-color: white;
+}
+
 /* Featured Products */
 .featured-products .row {
     display: flex;
@@ -329,8 +333,9 @@ footer {
 }
 
 h2 {
-    animation: float 10s infinite;
+    animation: float 4s infinite;
 }
+
 
 /* 2️⃣ Navbar Fade-in Effect */
 .navbar {
@@ -377,11 +382,15 @@ h2 {
 
 /* 5️⃣ Product Hover Flip Effect */
 .featured-products img, .categories img {
-    transition: transform 0.5s ease-in-out;
+    transition: transform 15s ease-in-out;
+    box-shadow: 0 0 20px rgba(253, 1, 228, 0.997);
+   
 }
 
 .featured-products img:hover, .categories img:hover {
-    transform: scale(1.1) rotateY(10deg);
+    transform: scale(0.8) rotateY(10deg);
+    box-shadow: 0 0 40px rgb(113, 6, 227), 0 0 80px rgba(255, 105, 180, 0.7); 
+
 }
 
 /* 6️⃣ Footer Fade-in on Scroll */
