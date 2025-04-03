@@ -199,13 +199,135 @@ p{
     animation: wobble 0.4s ease-in-out;
 }
 
-/* Footer */
+/* Footer 
 footer {
     background: #FF7E67;
     color: white;
     padding: 15px;
     text-align: center;
+}*/
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #ec3782, pink);
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    width:600px;
+    margin: auto;
 }
+
+/* Footer Container */
+.footer-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Heading */
+.footer-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Floating Labels */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label, 
+.input-group textarea:focus + label,
+.input-group input:valid + label, 
+.input-group textarea:valid + label {
+    top: -12px;
+    font-size: 14px;
+    color: #fff8c5;
+}
+
+/* Input Glow Effect */
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #fff8c5;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Textarea */
+.input-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background:pink;
+    color: #ff4d79;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:black;
+    color:#ff4d79 ;
+    transform: scale(1.05);
+}
+
+/* Footer Contact Details */
+.footer-text {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Shake Animation on Empty Submission */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
 
 /* Footer Icons Bounce Effect */
 @keyframes bounce {
@@ -422,5 +544,61 @@ footer.visible {
 .featured-products img:hover {
     transform: scale(1.1);
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .footer-container h2 {
+        font-size: 22px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer{
+        width:300px;
+        margin:auto;
+    }
+    .footer-container {
+        width:95%;
+    }
+
+    .footer-container h2 {
+        font-size: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+}
+
 
 
