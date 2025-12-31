@@ -7,64 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-   #loginForm {
-    display: none;
-    width: 300px;
-    padding: 20px;
-    background: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    position: absolute;
-    z-index: 1000;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    top:10%;
-    right: 20px; 
-}
-#closeLoginForm {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-    font-weight: bold;
-}
-
-#closeLoginForm:hover {
-    color: red;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-.form-group label {
-    font-weight: bold;
-    display: block;
-}
-.form-group input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-#submitBtn{
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-#submitBtn:hover {
-    background: #0056b3;
-}
-
-
-
-    </style> 
+    
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -88,6 +31,9 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                  <li class="nav-item ms-2">
+                    <button id="themeToggle" class="btn btn-outline-dark">🌙</button>
+                </li>
                 <li class="nav-item">
                     <button id="loginBtn">Login</button>
                 </li>
@@ -198,114 +144,28 @@
         <div class="footer-container">
             <h2>Contact Us</h2>
             <form id="contactForm">
-                <div class="input-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Your Name</label>
-                </div>
-    
-                <div class="input-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Your Email</label>
-                </div>
-    
-                <div class="input-group">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-    
-                <button type="submit">Send Message</button>
-            </form>
+    <div class="input-group">
+        <input type="text" id="contactName" required>
+        <label for="contactName">Your Name</label>
+    </div>
+
+    <div class="input-group">
+        <input type="email" id="contactEmail" required>
+        <label for="contactEmail">Your Email</label>
+    </div>
+
+    <div class="input-group">
+        <textarea id="contactMessage" required></textarea>
+        <label for="contactMessage">Your Message</label>
+    </div>
+
+    <button type="submit">Send Message</button>
+</form>
+
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let loginBtn = document.getElementById("loginBtn");
-            let loginForm = document.getElementById("loginForm");
-            let submitBtn = document.getElementById("submitBtn");
-
-            // Show the form when login button is clicked
-            loginBtn.addEventListener("click", function () {
-                loginForm.style.display = "block";
-            });
-
-            // Handle form submission
-            submitBtn.addEventListener("click", function () {
-                let username = document.getElementById("username").value;
-                let email = document.getElementById("email").value;
-                let password = document.getElementById("password").value;
-
-                if (username && email && password) {
-                    alert("Thanks for logging in, " + username + "!");
-                    document.getElementById("username").value = "";
-                    document.getElementById("email").value = "";
-                    document.getElementById("password").value = "";
-                    loginForm.style.display = "none"; // Hide form after submission
-                } else {
-                    alert("Please fill all the fields.");
-                }
-            });
-            closeLoginForm.addEventListener("click", function () {
-            loginForm.style.display = "none";});
-        });
-        
-
-     window.addEventListener("scroll", function () {
-    let footer = document.querySelector("footer");
-    let windowHeight = window.innerHeight;
-    let footerPosition = footer.getBoundingClientRect().top;
-
-    if (footerPosition < windowHeight - 50) {
-        footer.classList.add("visible");
-    }
-});
-document.addEventListener("DOMContentLoaded", function () {
-    let elements = document.querySelectorAll(".scroll-effect");
-
-    function revealOnScroll() {
-        elements.forEach((element) => {
-            let windowHeight = window.innerHeight;
-            let elementPosition = element.getBoundingClientRect().top;
-
-            if (elementPosition < windowHeight - 50) {
-                element.classList.add("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Run on load in case some elements are already in view
-});
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent actual form submission
-
-    let name = document.getElementById("name");
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
-
-    // Simple Validation
-    if (name.value === "" || email.value === "" || message.value === "") {
-        if (name.value === "") shakeInput(name);
-        if (email.value === "") shakeInput(email);
-        if (message.value === "") shakeInput(message);
-        return;
-    }
-
-    // Simulate Successful Submission
-    alert("📩 Message Sent Successfully!");
-    this.reset();
-});
-
-// Function to Shake Inputs
-function shakeInput(input) {
-    input.classList.add("shake");
-    setTimeout(() => input.classList.remove("shake"), 300);
-}
-
-
-
-    </script>
-
-    <script src="js/main.js"></script>
+   
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 

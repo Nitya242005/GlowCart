@@ -100,6 +100,59 @@ p{
     background: black;
     transform: scale(1.05);
 }
+   #loginForm {
+    display: none;
+    width: 300px;
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    top:10%;
+    right: 20px; 
+}
+#closeLoginForm {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+#closeLoginForm:hover {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label {
+    font-weight: bold;
+    display: block;
+}
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#submitBtn{
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+#submitBtn:hover {
+    background: #0056b3;
+}
 #loginBtn{
     background-color:#ffa9c9;
     color:black;
