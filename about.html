@@ -6,105 +6,95 @@
     <title>About Glowcart</title>
 
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: pink;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+       body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        .container {
-            display: flex;
-            align-items: center;
-            background: black;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            gap: 30px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 1000px;
+    width: 100%;
+    gap: 40px;
+    box-sizing: border-box;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* TEXT SECTION */
+.text-section {
+    flex: 1;
+    max-width: 55%;
+}
 
-        .text-section {
-            flex: 1;
-        }
+.text-section h2 {
+    color: #d63384;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
 
-        .text-section h2 {
-            color: #d63384;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
+.text-section p {
+    color: white;
+    line-height: 1.7;
+    font-size: 18px;
+    margin-bottom: 15px;
+    word-break: normal;
+    white-space: normal;
+}
 
-        .text-section p {
-            color: white;
-            line-height: 1.8;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
+/* BUTTON */
+.text-section button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        .text-section button {
-            background-color: #d63384;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* IMAGE SECTION */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-        .text-section button:hover {
-            background-color: #b02d6e;
-        }
+.image-section img {
+    width: 280px;
+    max-width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
 
-        .image-section img {
-            width: 350px;
-            max-width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
 
-        /* =====================
-           MOBILE VIEW
-        ===================== */
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-                align-items: flex-start;
-            }
+    .text-section {
+        max-width: 100%;
+    }
 
-            .container {
-                flex-direction: column;
-                padding: 25px;
-                text-align: center;
-            }
+    .image-section img {
+        width: 200px;
+    }
+}
 
-            .text-section h2 {
-                font-size: 24px;
-            }
-
-            .text-section p {
-                font-size: 16px;
-            }
-
-            .image-section img {
-                width: 220px;
-            }
-
-            .text-section button {
-                width: 100%;
-                margin-top: 10px;
-            }
-        }
     </style>
 </head>
 
